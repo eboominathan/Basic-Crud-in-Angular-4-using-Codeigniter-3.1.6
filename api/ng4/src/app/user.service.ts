@@ -70,7 +70,8 @@ export class UserService {
    * @returns {Promise<User>}
    */
   remove(id: string): Promise<any>{
-    return this.http.delete(`${this.usersURL}/${id}`)
+    var data = JSON.stringify({_id: id,delete:1});
+    return this.http.post(this.usersURL, data, {headers: this.headers})
       .toPromise()
       .then(response => console.log(response))
       .catch(this.handleError)
