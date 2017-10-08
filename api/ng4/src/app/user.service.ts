@@ -58,7 +58,7 @@ export class UserService {
    * @returns {Promise<User>}
    */
   update(user: User): Promise<User>{
-    return this.http.post(`${this.usersURL}/${user._id}`, JSON.stringify(user), {headers: this.headers})
+    return this.http.post(this.usersURL, JSON.stringify(user), {headers: this.headers})
       .toPromise()
       .then(response => response.json() as User)
       .catch(this.handleError)

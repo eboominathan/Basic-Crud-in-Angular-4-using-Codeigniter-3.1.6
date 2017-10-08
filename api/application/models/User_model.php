@@ -21,7 +21,25 @@ class User_model extends CI_Model {
 		}	
 		
 	}
-	
+	Public function save_user($datas)
+	{	
+
+		$response = array('success' => 'User saved successfully !');
+		$data = array(
+					'firstName' => $datas->firstName,
+					'lastName' => $datas->lastName,
+					'email' => $datas->email,
+					'mobileNumber' => $datas->mobileNumber
+					);
+		if(isset($datas->_id)){
+			$where =array('_id' => $datas->_id);
+			$this->db->update('user_details',$data,$where);
+		}else{
+			$this->db->insert('user_details',$data);
+		}	
+		return $response;
+		
+	}
 
 }
 
