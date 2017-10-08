@@ -1,0 +1,46 @@
+<div class="col-md-offset-3 col-md-6" *ngIf="user">
+  <div class="panel panel-default">
+    <div class="row" style="margin: 0">
+      <div class="col-md-12 text-center form-header">
+        <h4>Add New User</h4>
+      </div>
+    </div>
+    <div class="panel-body">
+      <form [formGroup]="userAddForm"
+            (ngSubmit)="add()"
+            novalidate>
+        <div class="form-group">
+          <label for="firstName">First name</label>
+          <input id="firstName"
+                 value="{{user.firstName}}"
+                 class="form-control"
+                 formControlName="firstName">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last name</label>
+          <input id="lastName"
+                 class="form-control"
+                 formControlName="lastName">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email"
+                 type="email"
+                 class="form-control"
+                 formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="mobileNumber">Mobile number</label>
+          <input id="mobileNumber"
+                 class="form-control"
+                 formControlName="mobileNumber">
+        </div>
+        <div>
+          <button class="btn btn-success"
+                  [disabled]="!userAddForm.valid">Add User</button>
+          <button type="button" class="btn btn-default" (click)="goBack()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Niral Munjariya <niral.munjariya@iwantunlimited.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,32 @@
+html, body {
+  background-color: #f1f1f1 !important;
+}
+
+.panel {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+  border: none;
+  background: #fff;
+}
+
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+  background: #1976D2;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+table {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+  background: #ffffff;
+}
+
+label {
+  font-weight: 500;
+}
+
+.form-header {
+  background: #1976D2;
+  color: #ffffff;
+}
