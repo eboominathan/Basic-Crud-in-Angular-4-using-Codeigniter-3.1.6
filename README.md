@@ -15,7 +15,10 @@ goto the path of your_file_path/ api/ng4 in your Command prompt or Git Bash what
 __Build and serve it__
 
 ```
-$ ng serve --open 
+npm install
+
+npm start 
+ng serve 
 ```
 
 Visit http://localhost:4200 and you should see "app works!"
